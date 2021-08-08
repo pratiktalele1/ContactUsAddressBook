@@ -18,8 +18,8 @@ public class UC3 {
 		for(int i=0;i<name.size();i++) {
 			System.out.println(((List<String>) map.get(name.get(i))).get(0));	
 			if(((List<String>) map.get(name.get(i))).get(0).equals(getUserInput)) {
-				
-				System.out.print("1->name\t2->address");
+				System.out.println("want to change");
+				System.out.print("1->name\t2->address\t3->cityName\t4->stateName\t5->zipCode\t6->phoneNumber\t7->emailAddress");
 				int option = scanInput.nextInt();
 				switch(option) {
 				case 1:{
