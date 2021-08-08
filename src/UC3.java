@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.sun.jdi.Type;
 
 public class UC3 {
-	public void print(Map<String, Object> map, List<String> name, Contact contact) {
+	public void updateDetails(Map<String, Object> map, List<String> name, Contact contact) {
 		
 				
 		try {
@@ -42,7 +42,7 @@ public class UC3 {
 					System.out.println("enter new cityName - "); 															
 					String changeCityName=scanInput.next();
 					List<String> list = (List<String>) map.get(name.get(i));
-					list.set(3, changeCityName);
+					list.set(2, changeCityName);
 					map.put(name.get(i), list);
 					break;
 				}
@@ -50,7 +50,7 @@ public class UC3 {
 					System.out.println("enter new stateName - ");
 					String changeStateName=scanInput.next();
 					List<String> list = (List<String>) map.get(name.get(i));
-					list.set(4, changeStateName);
+					list.set(3, changeStateName);
 					map.put(name.get(i), list);
 					break;
 				}
@@ -58,7 +58,7 @@ public class UC3 {
 					System.out.println("enter new zipCode - ");
 					String changeZipCode=scanInput.next();
 					List<String> list = (List<String>) map.get(name.get(i));
-					list.set(5, changeZipCode);
+					list.set(4, changeZipCode);
 					map.put(name.get(i), list);
 					break;
 				}
@@ -66,7 +66,7 @@ public class UC3 {
 					System.out.println("enter new phoneNumber - ");
 					String changePhoneNumber=scanInput.next();
 					List<String> list = (List<String>) map.get(name.get(i));
-					list.set(6, changePhoneNumber);
+					list.set(5, changePhoneNumber);
 					map.put(name.get(i), list);
 					break;
 				}
@@ -74,7 +74,7 @@ public class UC3 {
 					System.out.println("enter new emailAddress - ");
 					String changeEmailAddress=scanInput.next();
 					List<String> list = (List<String>) map.get(name.get(i));
-					list.set(7, changeEmailAddress);
+					list.set(6, changeEmailAddress);
 					map.put(name.get(i), list);
 					break;
 				}
