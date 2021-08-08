@@ -24,6 +24,12 @@ public class AddressMain {
 		uc4.delete(contact.map,contact.names);
 		
 		uc1.print(contact.map, contact.names);
+		
+		UC5 uc5=new UC5();
+		uc5.addMultipleContact(contact.map, contact.names,contact);
+		
+		uc1.print(contact.map, contact.names);
+
 
 	}
 }
