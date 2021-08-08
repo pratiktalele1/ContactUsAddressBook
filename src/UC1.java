@@ -55,7 +55,7 @@ public class UC1 {
 	}
 
 	public void print(Map<String, Object> map,List<String> name) {
-		for(int i=0;i<map.size();i++) {
+		for(int i=0;i<name.size();i++) {
 			System.out.println(map.get(name.get(i)));
 		}
 	}
