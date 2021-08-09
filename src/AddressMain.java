@@ -8,6 +8,7 @@ public class AddressMain {
 	static UC5 uc5 = new UC5();
 	static UC8 uc8 = new UC8();
 	static UC9 uc9 = new UC9();
+	static UC10 uc10 = new UC10();
 	static Contact contact = new Contact();
 	static Scanner scan = new Scanner(System.in);
 
@@ -18,7 +19,7 @@ public class AddressMain {
 		do {
 
 			System.out.println(
-					"1->add person\t 2->print contact\t 3->update contact\t 4->delete contact\t 5->add multiple contact\t 6->search people by city or state");
+					"1->add person\t 2->print contact\t 3->update contact\t 4->delete contact\t 5->add multiple contact\t 6->search people by city or state\n7->get count by city");
 			int option = scan.nextInt();
 
 			switch (option) {
@@ -28,7 +29,8 @@ public class AddressMain {
 				break;
 			}
 			case 2: {
-				uc9.directoryByStateAndCity(contact.map, contact.names,contact.directoryForCity,contact.directoryForState);
+				uc9.directoryByStateAndCity(contact.map, contact.names, contact.directoryForCity,
+						contact.directoryForState);
 				uc1.print(contact.map, contact.names);
 
 				break;
@@ -47,6 +49,10 @@ public class AddressMain {
 			}
 			case 6: {
 				uc8.showByCity(contact.map, contact.names);
+				break;
+			}
+			case 7: {
+				uc10.getCountOfPerson(contact.map, contact.names);
 				break;
 			}
 			}
