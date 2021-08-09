@@ -8,7 +8,8 @@ public class Contact {
 
 	public static Map<String, Object> map = new HashMap<String, Object>();
 	public static List<String> names=new ArrayList<String>();
-
+	public static Map<String ,List<String>> directoryForCity =new HashMap<String, List<String>>();
+	public static Map<String ,List<String>> directoryForState =new HashMap<String, List<String>>();
 	private String FullName;
 	private String address;
 	private String cityName;

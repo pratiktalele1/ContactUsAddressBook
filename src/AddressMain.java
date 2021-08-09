@@ -7,6 +7,7 @@ public class AddressMain {
 	static UC4 uc4 = new UC4();
 	static UC5 uc5 = new UC5();
 	static UC8 uc8 = new UC8();
+	static UC9 uc9 = new UC9();
 	static Contact contact = new Contact();
 	static Scanner scan = new Scanner(System.in);
 
@@ -27,6 +28,7 @@ public class AddressMain {
 				break;
 			}
 			case 2: {
+				uc9.directoryByStateAndCity(contact.map, contact.names,contact.directoryForCity,contact.directoryForState);
 				uc1.print(contact.map, contact.names);
 
 				break;
