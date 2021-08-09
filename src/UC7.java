@@ -10,7 +10,7 @@ public class UC7 {
 				flag=1;
 			}
 		}
-		
+				
 		if(flag==1) {
 			return 1;
 		}else {

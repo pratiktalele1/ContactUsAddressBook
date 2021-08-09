@@ -6,6 +6,7 @@ public class AddressMain {
 	static UC3 uc3 = new UC3();
 	static UC4 uc4 = new UC4();
 	static UC5 uc5 = new UC5();
+	static UC8 uc8 = new UC8();
 	static Contact contact = new Contact();
 	static Scanner scan = new Scanner(System.in);
 
@@ -16,12 +17,13 @@ public class AddressMain {
 		do {
 
 			System.out.println(
-					"1->add person\t 2->print contact\t 3->update contact\t 4->delete contact\t 5->add multiple contact");
+					"1->add person\t 2->print contact\t 3->update contact\t 4->delete contact\t 5->add multiple contact\t 6->search people by city or state");
 			int option = scan.nextInt();
 
 			switch (option) {
 			case 1: {
 				uc1.add(contact.map, contact.names);
+
 				break;
 			}
 			case 2: {
@@ -41,10 +43,14 @@ public class AddressMain {
 				uc5.addMultipleContact(contact.map, contact.names, contact);
 				break;
 			}
+			case 6: {
+				uc8.showByCity(contact.map, contact.names);
+				break;
 			}
-			
+			}
+
 			System.out.println("want to repeat");
-			i=scan.nextInt();
+			i = scan.nextInt();
 
 		} while (i == 1);
 
