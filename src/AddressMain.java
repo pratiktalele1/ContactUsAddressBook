@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class AddressMain {
@@ -14,7 +15,7 @@ public class AddressMain {
 	static Contact contact = new Contact();
 	static Scanner scan = new Scanner(System.in);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		System.out.println("Welcome to Address Book");
 
@@ -22,7 +23,7 @@ public class AddressMain {
 
 			System.out.println(
 					"1->add person\t 2->print contact\t 3->update contact\t 4->delete contact\t 5->add multiple contact\t 6->search people by city or state\n"
-							+ "7->get count by city\t 8->sort by person name");
+							+ "7->get count by city\t 8->sort by person name\t 9>sort by city\t 10->write and read from file");
 			int option = scan.nextInt();
 
 			switch (option) {
@@ -64,6 +65,12 @@ public class AddressMain {
 			}
 			case 9: {
 				uc12.sortByCityName(contact.map, contact.names);
+				break;
+			}
+			case 10: {
+				UC13 uc13=new UC13();
+				uc13.fileWrite(contact.map, contact.names);
+				uc13.fileRead();
 				break;
 			}
 			}
