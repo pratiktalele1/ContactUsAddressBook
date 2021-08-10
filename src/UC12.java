@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class UC11 {
-	public void sortByPersonName(Map<String, Object> map, List<String> name) {
+public class UC12 {
+	public void sortByCityName(Map<String, Object> map, List<String> name) {
 		List<List> storeList = new ArrayList<List>();
 
 		for (int i = 0; i < map.size(); i++) {
@@ -12,10 +12,10 @@ public class UC11 {
 			list.addAll(((List<String>) map.get(name.get(i))));
 			storeList.add(list);
 		}
-		
-		List sortData=storeList.stream().map(data->data.get(0)).sorted().collect(Collectors.toList());
-		System.out.println(sortData);
-		
-	}
 
+		List sortData = storeList.stream().map(data -> data.get(2)).sorted().collect(Collectors.toList());
+		System.out.println(sortData);
+
+
+	}
 }

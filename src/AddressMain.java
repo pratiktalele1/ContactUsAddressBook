@@ -10,6 +10,7 @@ public class AddressMain {
 	static UC9 uc9 = new UC9();
 	static UC10 uc10 = new UC10();
 	static UC11 uc11 = new UC11();
+	static UC12 uc12 = new UC12();
 	static Contact contact = new Contact();
 	static Scanner scan = new Scanner(System.in);
 
@@ -59,6 +60,10 @@ public class AddressMain {
 			}
 			case 8: {
 				uc11.sortByPersonName(contact.map, contact.names);
+				break;
+			}
+			case 9: {
+				uc12.sortByCityName(contact.map, contact.names);
 				break;
 			}
 			}
